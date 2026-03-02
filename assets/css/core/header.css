@@ -1,0 +1,84 @@
+/**
+ * #.# Header
+ * #.#  Client Custom Styles
+ *
+ * Header section styles including navigation and off canvas
+*/
+
+header{position:fixed;width:100%;top:0;padding:25px 0;height:80px;z-index:150;background-color:var(--off-white)}
+.header-logo{position:absolute;max-width:111px;display:inline-block;top:25px;left:calc(50% - 56px)}
+.header-logo img{width:100%;height:auto}
+.header-icon{position:absolute;display:inline-block;top:20px;left:calc(50% - 15px);max-width:30px;display:inline-block}
+.header-icon img{width:100%;height:auto}
+.hidden-height{height:80px}
+.hamburger{color:var(--black);cursor:pointer;font-size:12px;font-weight:500;letter-spacing:2.4px;text-transform:uppercase;margin-top:3px}
+
+
+/* =============================
+  # Off Canvas Menu
+============================= */
+
+.off-canvas{position:fixed;transition:all .9s ease-in-out;top:-100svh;height:100svh;width:100vw;z-index:100;background-color:var(--off-white);padding-top:30px}
+.off-canvas.active{transition:all .9s ease-in-out;top:80px}
+.off-canvas nav ul{list-style:none;padding:0;margin:0;display:block;padding-left:30px}
+.off-canvas nav ul li{}
+.off-canvas nav ul li a{font-size:32px;font-weight:var(--semi);color:var(--offwhite);line-height:54px}
+.off-canvas nav ul li a:hover{color:var(--orange)}
+.off-canvas nav{margin-top:0;display:block;width:90%;position:relative;top:20px}
+.menu-nav{top:12px;position:absolute;right:20px;color:var(--black);font-size:22px;cursor:pointer;transition:all .2s ease;mix-blend-mode:unset;background-color:transparent}
+.menu-nav:hover{color:var(--pink)}
+.open-menu{top:12px;position:absolute;right:20px;color:var(--white);font-size:22px;cursor:pointer;transition:all .2s ease;mix-blend-mode:unset;background-color:transparent}
+.cnavas-logo{top:6px;position:relative;display:inline-block}
+.open-menu:hover{color:var(--skyblue);cursor:pointer}
+.off-canvas .contact-details{border-top:1px solid var(--white);margin-top:50px}
+.off-canvas .contact-details h3{color:var(--white);padding:20px 0 10px}
+.off-canvas .contact-details p{color:var(--white)}
+.off-canvas .contact-details p a{font-weight:var(--semi);color:var(--white)}
+.off-canvas .contact-block.content-block a{color:var(--offwhite);border-bottom:1px solid rgba(225,225,225,0.1)}
+.off-canvas .contact-block.content-block a:hover{color:var(--white);border-bottom:1px solid rgba(225,225,225,1)}
+.off-canvas .footer-socials.contact-socials h3{color:var(--white);padding-top:20px;padding-bottom:0}
+.off-canvas .footer-socials.contact-socials .social-links li a{color:var(--pink);background-color:var(--white)}
+.off-canvas .footer-socials.contact-socials .social-links li a:hover{background-color:var(--skyblue)}
+.off-canvas{opacity:0;z-index:-1}
+.off-canvas.active{opacity:1;z-index:100}
+.off-canvas h4{font-size:20px;color:var(--purple);line-height:34px;font-family:var(--header);padding-bottom:20px;position:relative;top:-10px}
+.off-canvas .image-block{max-height:200px;overflow:hidden}
+.off-canvas-menu-block{margin-top:20px;border-left:solid 1px var(--Calico);padding-left:20px}
+.off-canvas-menu-block ul{list-style:none;padding-left:0}
+.off-canvas-menu-block ul li{margin-bottom:12px}
+.off-canvas-menu-block ul li.menu-item-has-children{position:relative;margin-bottom:10px}
+.off-canvas-menu-block ul li.menu-item-has-children::before{content:"";height:1px;background-color:var(--purple);top:13px;left:0;width:100%;position:absolute;display:block;z-index:1}
+.off-canvas-menu-block ul li.menu-parent > a{background-color:var(--off-white);padding-right:10px;position:relative;z-index:2;border-bottom:0!important;cursor:default}
+.off-canvas-menu-block ul li a{color:var(--black);font-size:16px;background-color:var(--off-white);font-style:normal;font-weight:400;line-height:24px;border-bottom:1px solid rgba(0,0,0,.0);transition:.2s ease-in-out all}
+.off-canvas-menu-block ul li a:hover,.off-canvas-menu-block ul li a:focus{color:var(--black);border-bottom:1px solid rgba(0,0,0,9);transition:.2s ease-in-out all}
+.offcanvas-extras-menu-container{margin-top:75px}
+.offcanvas-extras-menu-container li{display:inline-block;margin-left:30px}
+.offcanvas-extras-menu-container li a{color:var(--black);font-size:18px;font-style:normal;font-weight:400;line-height:24px;border-bottom:1px solid rgba(0,0,0,.0);transition:.2s ease-in-out all}
+.offcanvas-extras-menu-container li a:hover,.offcanvas-extras-menu-container li a:focus{color:var(--black);border-bottom:1px solid rgba(0,0,0,9);transition:.2s ease-in-out all}
+.off-canvas-menu-block .sub-menu{margin-top:13px;margin-left:20px;margin-bottom:22px}
+
+/* =============================
+  # Theme Colours
+============================= */
+
+#menu-header-menu{list-style:none;padding:0;margin:0}
+#menu-header-menu li{margin-bottom:5px;margin-left:35px;display:inline-block}
+#menu-header-menu li a{color:var(--black);cursor:pointer;font-size:12px;font-weight:500;letter-spacing:2.4px;text-transform:uppercase;border-bottom:1px solid rgba(0,0,0,.0);transition:.2s ease-in-out all}
+#menu-header-menu li a:hover,#menu-header-menu li a:focus{color:var(--black);border-bottom:1px solid rgba(0,0,0,9);transition:.2s ease-in-out all}
+.menu-close{position:absolute;left:27px;top:31px;border-bottom:1px solid rgba(0,0,0,.0);transition:.2s ease-in-out all}
+.menu-close:hover{border-bottom:1px solid rgba(0,0,0,9);transition:.2s ease-in-out all}
+.menu-open{transform:rotate(-90deg) translate(-100%,0);transform-origin:top left;position:absolute;left:20px;top:15px}
+.header-menu{margin-top:2px;margin-right:-3px}
+
+/* =============================
+  # Theme Colours
+============================= */
+
+body .hamburger span.menu-close{opacity:1;transition:all .9s ease-in-out}
+body .hamburger span.menu-open{opacity:0;transition:all .9s ease-in-out}
+body .header-logo{opacity:1;transition:all .9s ease-in-out}
+body .header-icon{opacity:0;transition:all .9s ease-in-out}
+body.active .hamburger span.menu-close{opacity:0;transition:all .9s ease-in-out}
+body.active .hamburger span.menu-open{opacity:1;transition:all .9s ease-in-out}
+body.active .header-logo{opacity:0;transition:all .9s ease-in-out}
+body.active .header-icon{opacity:1;transition:all .9s ease-in-out}

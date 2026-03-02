@@ -1,0 +1,47 @@
+/**
+ * #.# Home Banner Module
+ *
+ * Styles for template-part/modules/home_banner_module.php
+**/
+.home_banner_module {}
+.home_banner_module,
+.home_banner_module .container,
+.home_banner_module .container .row,
+.home_banner_module .container .row .col-lg-12{min-height:calc(100svh - 64px)}
+.home_banner_module .container {position: relative;z-index:2}
+.home_banner_module {padding:0px;position: relative;}
+.banner-logo{width:100%;max-width:298px;height:auto;margin:auto}
+
+.banner-logo img {width:100%;height:auto}
+
+.banner-title {padding:20px 50px 50px}
+.banner-title h1 {color:var(--offwhite);;text-transform: uppercase;}
+.banner-ctas .btn {margin:0px 20px}
+
+.home-banner-footer-bg {position: absolute;bottom: 0px;width: 100%;}
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+.home_banner_module .btn {margin-bottom:30px}
+.banner-logo {max-width: 188px;}
+}
+
+@media (max-width: 600px) {
+.content_introduction_module::before {left: -20px;}
+.content_introduction_module::after {right: -20px;}
+}

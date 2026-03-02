@@ -1,0 +1,62 @@
+/**
+ * #.# FAQ Module
+ *
+ * Styles for template-part/modules/faq_module.php
+**/
+.faq_module{position:relative;padding:80px 40px 100px 80px;background-color:var(--blue)}
+.faq_module::before,.faq_module::after{content:"";position:absolute;background-repeat:no-repeat;background-size:contain}
+.faq_module::before{top:0;left:0;width:473px;height:293px;background-image:url(../../../img/faq-top.png)}
+.faq_module::after{right:0;bottom:0;width:339px;height:272px;background-image:url(../../../img/faq-bottom.png)}
+.faq-list{}
+.faq-list-one{padding-top:70px}
+.faq-list-one h3{color:var(--offwhite)}
+.faq-list-two{padding-top:108px}
+.faq-list-specials{}
+.faq-featured-link{padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid var(--offwhite);text-align:center}
+.faq-featured-link h3{width:80%;margin:0 auto;padding-bottom:20px;color:var(--offwhite)}
+.faq-featured-link p{color:var(--offwhite)}
+.faq-list.faq-list-specials > .faq-featured-link:last-of-type{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.accordion{}
+.accordion-item{}
+.accordion-header{position:relative;padding:20px 0 20px 30px;color:var(--offwhite);font-size:20px;font-weight:var(--medium);line-height:1;cursor:pointer;transition:background .2s ease}
+.accordion-header:hover{}
+.accordion-header::after{content:"+";position:absolute;top:5px;left:0;font-size:40px;transition:transform .2s ease}
+.accordion-header.active::after{content:"–"}
+.accordion-content{display:none;width:calc(100% + 25px);margin-left:-25px;padding:20px;border-radius:20px;background-color:var(--lightblue)}
+.accordion-content.content-block p,.accordion-content.content-block li{color:var(--offwhite)}
+.accordion-header:focus{outline:2px solid var(--offwhite);outline-offset:2px}
+
+/* Optional: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-header,
+  .accordion-header::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1200px) {
+  .faq-list-specials {padding-top: 60px;}
+}
+
+@media (max-width: 992px) {
+  .faq_module::before {width: 293px;height: 173px;}
+  .faq_module {padding:80px 40px 100px 40px}
+  .faq-list-two {padding-top: 0px;}
+  .faq-list-one {padding-top: 20px;}
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

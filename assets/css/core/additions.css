@@ -1,0 +1,168 @@
+/**
+ * #.#  Client Custom Styles
+ *
+ * Theme specific styles
+*/
+
+/* =============================
+  # Fonts
+============================= */
+
+/* SELF HOSTED FONTS HERE */
+
+/* =============================
+  # Theme Colours
+============================= */
+
+
+:root {
+  --black: rgba(29, 29, 29, 1);
+  --main-color: rgba(0, 188, 138, 1);
+  --green: rgba(0, 188, 138, 1);
+  --grey: rgba(227, 227, 227, 1);
+  --dark-grey:rgba(142, 142, 142, 1);
+  --white: rgba(255, 255, 255, 1);
+  
+  --content: "Guggenheim Sans", serif;
+  --header:  "Guggenheim Sans", serif;
+  --semi:  "Guggenheim Sans Semi", serif;
+  --regular:  "Guggenheim Sans Regular", serif;
+}
+
+/* =============================
+  # Dark Mode Colours
+============================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: rgba(255, 255, 255, 1);       /* invert */
+    --white: rgba(29, 29, 29, 1);
+    --grey: rgba(80, 80, 80, 1);
+    --dark-grey: rgba(200, 200, 200, 1);
+    --main-color: rgba(0, 188, 138, 1);    /* keep consistent or tweak */
+  }
+}
+
+/* =============================
+  # Site Defaults
+============================= */
+
+body,html {font-family:var(--regular)}
+
+/* =============================
+  # Content Blocks
+============================= */
+
+.content-block h1,
+.content-block h2,
+.content-block h3,
+.content-block h4,
+.content-block h5,
+.content-block h6,
+.content-block p,
+.content-block li { color:var(--black)}
+
+.content-block {}
+.content-block h1,
+.content-block h2 { font-size: 40px; line-height: 48px; font-weight: 600; padding-bottom: 30px; text-transform: uppercase; }
+.content-block h3 { font-size: 30px; line-height: 32px; font-weight: 600; padding-bottom: 5px; text-transform: uppercase; }
+.content-block h4 { font-size: 18px; line-height: 22px; }
+.content-block p {padding-bottom:25px}
+.content-block p,
+.content-block li { font-size: 20px; line-height: 26px; }
+.content-block ul { list-style-position: inside; list-style-type: disc;padding-bottom: 25px; }
+.content-block ol { list-style-position: inside; list-style-type: decimal; padding-bottom: 25px;}
+
+/* =============================
+  # Slick Slider
+============================= */
+
+.slick-prev { left: calc(50% + 40px); background-image: url(../../../img/slick-left.svg); transform: rotate(135deg);}
+.slick-next { right: calc(50% - 182px); background-image: url(../../../img/slick-right.svg); transform:  rotate(-45deg);}
+.events_module .slick-prev:hover, .events_module .slick-next:hover {border:solid 1px var(--black);opacity:1}
+.events_module .slick-prev.slick-disabled {opacity: 0.1;border:solid 1px var(--green)!important;pointer-events: none; cursor: default;}
+
+/* =============================
+  # Buttons
+============================= */
+.btn {
+  --bs-btn-padding-x: .75rem;
+  --bs-btn-padding-y: .375rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: #212529;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: .375rem;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-disabled-opacity: .65;
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: center; text-decoration: none; vertical-align: middle;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.cta-btn {
+  border-radius: var(--radius);
+  font-size: 20px; line-height: 1; min-width: 120px;
+  padding: 10px 25px; text-transform: uppercase; font-weight: var(--medium);
+  transition: var(--transition);
+}
+.cta-btn:hover,
+.cta-btn:focus-visible { filter: brightness(.95); }
+
+.bronze-cta {
+  color: var(--offwhite);
+  background: radial-gradient(closest-side at 67% 36%, #C47C36 0%, #995214 100%) no-repeat padding-box;
+}
+.bronze-cta:hover,
+.bronze-cta:focus-visible {
+  background: radial-gradient(closest-side at 70% 38%, #16748E 0%, #17243E 100%) no-repeat padding-box;
+}
+
+.black-cta {color: var(--offwhite);background: radial-gradient(closest-side at 70% 38%, #16748E 0%, #17243E 100%) no-repeat padding-box;}
+.black-cta:hover {background: radial-gradient(closest-side at 67% 36%, var(--black) 0%, var(--black) 100%) no-repeat padding-box;}
+
+
+
+/* =============================
+  # Media Queries
+============================= */
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1080px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

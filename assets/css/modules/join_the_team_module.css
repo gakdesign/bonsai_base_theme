@@ -1,0 +1,24 @@
+/**
+ * #.# Opening Hours Module
+ *
+ * Styles for template-part/modules/opening_hours_module.php
+**/
+.join_the_team_module {padding-bottom:90px}
+.join-us-block {background-color:var(--blue);background-image: url(../../../img/join-us-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;padding:100px 0px}
+.join-us-block h1, .join-us-block h2 {color:var(--offwhite)}
+.join-us-block p {color:var(--offwhite)}
+
+.job-item {margin-top:35px;background-color:var(--lightblue);border-radius:20px;color:var(--offwhite);padding:40px}
+.job-item h3 {color:var(--offwhite);font-size:20px;line-height:100%;padding-bottom:20px}
+.job-item p {color:var(--offwhite)}
+
+
+@media (max-width: 992px) {
+  .join-us-block {padding: 70px;}
+}
+@media (max-width: 768px) {
+  .join-us-block {padding: 40px;}
+}

@@ -1,0 +1,15 @@
+/**
+ * #.# Image Slider Module
+ *
+ * Styles for template-part/modules/image_slider_module.php
+**/
+.image_slider_module {padding:50px 0px}
+.image_slider_module.room-scheme-beatrice {background-color:var(--beatrice)}
+.image_slider_module.room-scheme-daisy {background-color:var(--daisy)}
+.image_slider_module.room-scheme-mary {background-color:var(--mary)}
+.image_slider_module.room-scheme-henrietta {background-color:var(--henrietta)}
+.image_slider_module.room-scheme-dorothy {background-color:var(--dorothy)}
+.image_slider_module.room-scheme-majorie {background-color:var(--majorie)}
+.image_slider_module.room-scheme-violet {background-color:var(--violet)}
+.image_slider_module.room-scheme-cramwell-cottage {background-color:var(--cramwell)}
+.image_slider_module.room-scheme-two-mill-cottage {background-color:var(--twomill)}

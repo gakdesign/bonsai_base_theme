@@ -1,0 +1,41 @@
+/**
+ * #.# Gift Voucher Advert Module
+ *
+ * Styles for template-part/modules/gift_voucher_advert_module.php
+**/
+.gift_voucher_advert_module {}
+.gift-voucher-bg {background-image:url(../../../img/gift-bg.jpg);padding:30px 60px;
+background-position:center center;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.gift-voucher-bg .content-block{padding:50px 0px}
+
+
+.gift-voucher-bg h2,
+.gift-voucher-bg p {color:var(--offwhite);}
+.gift-voucher-bg p {padding-bottom:100px}
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+.gift-voucher-bg {padding:30px 20px;}
+.gift-voucher-bg p {padding-bottom:50px}
+
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+.gift-voucher-bg {padding:30px;}
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
