@@ -9,6 +9,8 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $banner_image   = get_sub_field('banner_image');
 $banner_video   = get_sub_field('banner_video');
 $banner_logo    = get_sub_field('banner_logo');

@@ -5,6 +5,8 @@
  * @package Bonsai_Base_Theme
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Get a trimmed, safe excerpt.
  *

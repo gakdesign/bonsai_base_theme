@@ -9,6 +9,8 @@
  * Related JS:  assets/js/main.js — galleryslider-for / galleryslider-nav
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading = get_sub_field('section_heading');
 $gallery_images  = get_sub_field('gallery_images');
 $no_top          = get_sub_field('remove_top_padding') ? ' no-top-padding' : '';

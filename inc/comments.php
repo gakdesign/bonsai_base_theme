@@ -3,6 +3,8 @@
  * comments.php – Disable WordPress comments system
  */
 
+defined( 'ABSPATH' ) || exit;
+
 add_action('admin_menu', function() {
     remove_menu_page('edit-comments.php');
 });

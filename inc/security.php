@@ -5,6 +5,8 @@
  * @package Bonsai_Base_Theme
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Head cleanup.
  */
@@ -59,21 +61,7 @@ if ( ! defined( 'WP_POST_REVISIONS' ) ) {
 	define( 'WP_POST_REVISIONS', 5 );
 }
 
-/**
- * Remove query strings from static resources.
- *
- * This can help with some proxy/caching setups, but be aware it also
- * removes cache-busting query vars like ?ver=1.2.3.
- *
- * @param string $src Script or style source URL.
- * @return string URL without query string.
- */
-function bonsai_remove_query_strings( $src ) {
-	$parts = explode( '?', $src );
-	return $parts[0];
-}
-add_filter( 'script_loader_src', 'bonsai_remove_query_strings', 15 );
-add_filter( 'style_loader_src', 'bonsai_remove_query_strings', 15 );
+// Note: query-string stripping removed — it negated filemtime() cache-busting in assets.php.
 
 /**
  * Disable XML-RPC.

@@ -1,6 +1,8 @@
 <?php
 // inc/rss.php
 
+defined( 'ABSPATH' ) || exit;
+
 add_filter('the_excerpt_rss', 'gak_rss_featured_img');
 add_filter('the_content_feed', 'gak_rss_featured_img');
 

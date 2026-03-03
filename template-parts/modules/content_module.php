@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * #.# Content Module
  *
@@ -7,6 +7,8 @@
  * Related CSS (Global CSS): assets/css/core/base.css
  * Related JS (Global scripts): assets/js/main.js
 **/
+
+defined( 'ABSPATH' ) || exit;
 ?>
 
 
@@ -20,7 +22,7 @@
           <div class="col-lg-3"></div>
           <div class="col-lg-6">
             <div class="content-block">
-              <?php echo get_sub_field('text_content_block'); ?>
+              <?php echo wp_kses_post( get_sub_field('text_content_block') ); ?>
             </div>
           </div>
           <div class="col-lg-3"></div>
@@ -35,8 +37,8 @@
           <div class="col-lg-8">
             <div class="content-quote-block text-center">
               <div class="quote-icon">“</div>
-              <div class="quote-content"><?php echo get_sub_field('main_quote'); ?></div>
-              <div class="quote-cite"><?php echo get_sub_field('quote_citation'); ?></div>
+              <div class="quote-content"><?php echo wp_kses_post( get_sub_field('main_quote') ); ?></div>
+              <div class="quote-cite"><?php echo esc_html( get_sub_field('quote_citation') ); ?></div>
             </div>
           </div>
           <div class="col-lg-2"></div>
@@ -51,7 +53,7 @@
           <div class="col-lg-8">
             <div class="video-block">
               <video muted="" autoplay="" loop="" playsinline="" id="video_player" preload="auto">
-                <source type="video/mp4" src="<?php echo get_sub_field('video_file'); ?>">
+                <source type="video/mp4" src="<?php echo esc_url( get_sub_field('video_file') ); ?>">
               </video>
             </div>
           </div>
@@ -84,7 +86,7 @@
           <div class="col-lg-2"></div>
           <div class="col-lg-8">
             <div class="table-block">
-              <?php echo get_sub_field('content_table'); ?>
+              <?php echo wp_kses_post( get_sub_field('content_table') ); ?>
             </div>
           </div>
           <div class="col-lg-2"></div>
@@ -125,12 +127,12 @@
           <div class="col-lg-2"></div>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="content-block">
-              <?php echo get_sub_field('text_column_one'); ?>
+              <?php echo wp_kses_post( get_sub_field('text_column_one') ); ?>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="content-block">
-              <?php echo get_sub_field('text_column_two'); ?>
+              <?php echo wp_kses_post( get_sub_field('text_column_two') ); ?>
             </div>
           </div>
           <div class="col-lg-2"></div>
@@ -160,7 +162,7 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="center-content-left">
                   <div class="content-block">
-                    <?php echo get_sub_field('text_column_split'); ?>
+                    <?php echo wp_kses_post( get_sub_field('text_column_split') ); ?>
                   </div>
                 </div>
 
@@ -171,7 +173,7 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="center-content-left">
                   <div class="content-block">
-                    <?php echo get_sub_field('text_column_split'); ?>
+                    <?php echo wp_kses_post( get_sub_field('text_column_split') ); ?>
                   </div>
                 </div>
               </div>

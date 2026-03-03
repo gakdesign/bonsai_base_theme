@@ -10,9 +10,11 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading = get_sub_field('section_heading');
 $section_content = get_sub_field('section_content');
-$posts_per_page  = get_sub_field('posts_per_page') ?: 9;
+$posts_per_page  = absint( get_sub_field('posts_per_page') ) ?: 9;
 $no_top          = get_sub_field('remove_top_padding') ? ' no-top-padding' : '';
 $no_bottom       = get_sub_field('remove_bottom_padding') ? ' no-bottom-padding' : '';
 
@@ -21,6 +23,7 @@ $case_studies = new WP_Query([
   'posts_per_page' => $posts_per_page,
   'orderby'        => 'date',
   'order'          => 'DESC',
+  'no_found_rows'  => true,
 ]);
 ?>
 
@@ -46,16 +49,16 @@ $case_studies = new WP_Query([
           <div class="col-lg-4 col-md-6">
             <article class="case-study-card">
               <?php if ( has_post_thumbnail() ) : ?>
-                <a href="<?php the_permalink(); ?>" class="case-study-image">
+                <a href="<?php echo esc_url( get_permalink() ); ?>" class="case-study-image">
                   <?php the_post_thumbnail( 'large', [ 'class' => 'img-res', 'loading' => 'lazy' ] ); ?>
                 </a>
               <?php endif; ?>
               <div class="case-study-body">
                 <h3>
-                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  <a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
                 </h3>
                 <p><?php echo esc_html( bonsai_get_trimmed_excerpt( 25 ) ); ?></p>
-                <a href="<?php the_permalink(); ?>" class="case-study-link">Read case study</a>
+                <a href="<?php echo esc_url( get_permalink() ); ?>" class="case-study-link">Read case study</a>
               </div>
             </article>
           </div>

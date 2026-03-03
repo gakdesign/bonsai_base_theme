@@ -16,6 +16,8 @@
  *   so the child theme can override without copying everything.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( have_rows('page_builder') ) :
   while ( have_rows('page_builder') ) : the_row();
 

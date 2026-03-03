@@ -3,6 +3,8 @@
  * media.php – Image handling, SVGs, alt attributes, thumbnails
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Featured image admin label tweak
 add_filter('admin_post_thumbnail_html', function ($content) {
     return str_replace(__('Set featured image'), 'Image dimensions 1920x1080', $content);
@@ -19,7 +21,7 @@ add_action('shutdown', function () {
 });
 
 // Protect email addresses in content and widgets
-function protect_email_addresses($content) {
+function bonsai_protect_email_addresses($content) {
     return preg_replace_callback('/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/', function ($matches) {
         return implode('', array_map(function ($char) {
             return rand(0, 1)
@@ -28,8 +30,8 @@ function protect_email_addresses($content) {
         }, str_split($matches[0])));
     }, $content);
 }
-add_filter('the_content', 'protect_email_addresses');
-add_filter('widget_text', 'protect_email_addresses');
+add_filter('the_content', 'bonsai_protect_email_addresses');
+add_filter('widget_text', 'bonsai_protect_email_addresses');
 
 // Allow and sanitize SVG uploads
 add_filter('upload_mimes', function ($mimes) {

@@ -10,6 +10,8 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading = get_sub_field('section_heading');
 $no_top          = get_sub_field('remove_top_padding') ? ' no-top-padding' : '';
 $no_bottom       = get_sub_field('remove_bottom_padding') ? ' no-bottom-padding' : '';

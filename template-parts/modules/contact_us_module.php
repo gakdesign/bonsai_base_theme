@@ -13,6 +13,8 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading      = get_sub_field('section_heading');
 $section_content      = get_sub_field('section_content');
 $form_shortcode       = get_sub_field('contact_form_shortcode');
@@ -58,7 +60,7 @@ $contact_address   = get_field('contact_address', 'option');
             <?php endif; ?>
             <?php if ( $contact_email ) : ?>
               <p>
-                <a href="mailto:<?php echo esc_attr( $contact_email ); ?>">
+                <a href="<?php echo esc_url( 'mailto:' . $contact_email ); ?>">
                   <?php echo esc_html( $contact_email ); ?>
                 </a>
               </p>
@@ -72,7 +74,7 @@ $contact_address   = get_field('contact_address', 'option');
 
           <?php if ( $form_shortcode ) : ?>
             <div class="contact-form">
-              <?php echo do_shortcode( $form_shortcode ); ?>
+              <?php echo do_shortcode( wp_kses( $form_shortcode, [] ) ); ?>
             </div>
           <?php endif; ?>
 

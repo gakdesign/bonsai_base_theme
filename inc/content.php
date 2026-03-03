@@ -2,6 +2,9 @@
 /**
  * content.php – Content filters and tweaks
  */
+
+defined( 'ABSPATH' ) || exit;
+
 // Open external links in new tabs
 add_action('wp_footer', function () {
     echo "<script>

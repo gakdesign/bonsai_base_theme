@@ -1,6 +1,8 @@
 <?php
 // inc/post-labels.php
 
+defined( 'ABSPATH' ) || exit;
+
 add_action('init', function () {
     global $wp_post_types;
 

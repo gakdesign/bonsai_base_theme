@@ -1,20 +1,19 @@
 <?php
 // inc/header.php
 
-function add_custom_meta_before_wp_head() {
-    ?>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-    <link type="text/plain" rel="author" href="/humans.txt" />
-    <?php
+defined( 'ABSPATH' ) || exit;
+
+function bonsai_add_custom_meta_before_wp_head() {
+	?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<link type="text/plain" rel="author" href="/humans.txt" />
+	<?php
 }
 // Priority 0 to ensure it outputs as early as possible inside wp_head
-add_action('wp_head', 'add_custom_meta_before_wp_head', 0);
+add_action('wp_head', 'bonsai_add_custom_meta_before_wp_head', 0);

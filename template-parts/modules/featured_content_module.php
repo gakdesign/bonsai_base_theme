@@ -10,6 +10,8 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading = get_sub_field('section_heading');
 $section_content = get_sub_field('section_content');
 $featured_image  = get_sub_field('featured_image');

@@ -5,6 +5,8 @@
  * @package Bonsai_Base_Theme
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Load custom editor stylesheet.
 add_action(
 	'admin_init',

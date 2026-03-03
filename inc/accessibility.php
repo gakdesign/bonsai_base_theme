@@ -3,6 +3,8 @@
  * accessibility.php – Basic accessibility improvements
  */
 
+defined( 'ABSPATH' ) || exit;
+
 function add_role_list_to_ul($content) {
     return preg_replace('/<ul(?![^>]*\brole=["\']?list["\']?)([^>]*)>/i', '<ul role="list"$1>', $content);
 }

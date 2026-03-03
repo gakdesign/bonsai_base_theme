@@ -3,6 +3,8 @@
  * frontend.php – Frontend UX/UI tweaks
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Add a class to the body based on the post type
 add_filter('body_class', function ($classes) {
     if (is_singular()) {

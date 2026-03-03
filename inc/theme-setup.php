@@ -5,6 +5,8 @@
  * @package Bonsai_Base_Theme
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! function_exists( 'bonsai_theme_setup' ) ) :
 
 /**

@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- [inc/acf.php] Added ABSPATH guard; renamed `my_acf_op_init` to `bonsai_acf_op_init` and `write_humans_txt_on_save` to `bonsai_write_humans_txt_on_save`; changed Site Settings capability from `edit_posts` to `edit_theme_options`; sanitised humans.txt content with `wp_strip_all_tags()` and `sanitize_textarea_field()` before writing to filesystem
+- [inc/acf-json.php] Added `defined('ABSPATH') || exit` guard; switched save path from parent to child theme (`get_stylesheet_directory`); added child-first load path so ACF JSON resolves correctly when a child theme is active
+- [inc/gutenberg.php] Added ABSPATH guard; renamed `remove_block_css` to `bonsai_remove_block_css` to avoid function name collision
+- [inc/header.php] Added ABSPATH guard; renamed function to `bonsai_add_custom_meta_before_wp_head`; removed redundant `Content-Type` meta tag and both duplicate `X-UA-Compatible` tags (IE/Chrome Frame is EOL)
+- [inc/media.php] Added ABSPATH guard; renamed `protect_email_addresses` to `bonsai_protect_email_addresses` to avoid collision
+- [inc/assets.php] Added ABSPATH guard; added `jquery`, `slick`, and `bootjs` as explicit dependencies for `main.js`
+- [inc/security.php] Added ABSPATH guard; removed `bonsai_remove_query_strings` function and both filter registrations as it negated `filemtime()` cache-busting
+- [inc/*.php] Added `defined('ABSPATH') || exit` guard to all remaining `inc/` files: `accessibility`, `cleanup`, `comments`, `content`, `editor`, `frontend`, `helpers`, `lazy-load`, `post-labels`, `rss`, `theme-setup`, `tinymce-styles`, `webp`
+- [functions.php] Improved `error_log` message to include theme prefix and use concatenation rather than variable interpolation in a double-quoted string
+- [template-parts/modules/page-builder.php] Added ABSPATH guard
+- [template-parts/modules/content_module.php] Added ABSPATH guard; escaped all previously unescaped `get_sub_field()` outputs: `text_content_block`, `main_quote`, `content_table`, `text_column_one`, `text_column_two`, `text_column_split` (×2) via `wp_kses_post()`; `quote_citation` via `esc_html()`; `video_file` via `esc_url()`
+- [template-parts/modules/meet_the_team_module.php] Added ABSPATH guard; replaced `the_title()` with `esc_html( get_the_title() )`; added `no_found_rows => true` to WP_Query
+- [template-parts/modules/case_study_listings_module.php] Added ABSPATH guard; cast `posts_per_page` field with `absint()`; added `no_found_rows => true` to WP_Query; replaced all three `the_permalink()` calls with `esc_url( get_permalink() )`; replaced `the_title()` with `esc_html( get_the_title() )`
+- [template-parts/modules/contact_us_module.php] Added ABSPATH guard; corrected mailto href to use `esc_url( 'mailto:' . $contact_email )` instead of `esc_attr`; sanitised shortcode input with `wp_kses( $form_shortcode, [] )` before passing to `do_shortcode()`
+- [template-parts/modules/] Added ABSPATH guards to all remaining module files: `home_banner`, `page_banner`, `featured_content`, `featured_content_slider`, `featured_product_categories_gateway`, `image_gallery`, `image_gallery_slider`, `client_stories`, `testimonial`, `faq`, `you_might_also_like`
+
 ### Added
 - [template-parts/modules/] Added 12 Spencer and Bates–specific page builder modules: `page_banner`, `content_module`, `featured_content`, `featured_content_slider`, `featured_product_categories_gateway`, `image_gallery`, `image_gallery_slider`, `client_stories`, `meet_the_team`, `case_study_listings`, `contact_us`, `you_might_also_like`
 - [assets/css/modules/] Added corresponding CSS files for all 12 new modules

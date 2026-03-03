@@ -12,6 +12,8 @@
  * Related JS:  assets/js/main.js
  **/
 
+defined( 'ABSPATH' ) || exit;
+
 $section_heading = get_sub_field('section_heading');
 $section_content = get_sub_field('section_content');
 $no_top          = get_sub_field('remove_top_padding') ? ' no-top-padding' : '';
@@ -22,6 +24,7 @@ $team_query = new WP_Query([
   'posts_per_page' => -1,
   'orderby'        => 'menu_order',
   'order'          => 'ASC',
+  'no_found_rows'  => true,
 ]);
 ?>
 
@@ -52,7 +55,7 @@ $team_query = new WP_Query([
                 </div>
               <?php endif; ?>
               <div class="team-details">
-                <h3><?php the_title(); ?></h3>
+                <h3><?php echo esc_html( get_the_title() ); ?></h3>
                 <?php
                   $role = get_field('team_role');
                   if ( $role ) :

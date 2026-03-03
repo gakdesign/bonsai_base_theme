@@ -36,6 +36,6 @@ foreach ($modules as $module) {
     if (file_exists($file)) {
         require_once $file;
     } else {
-        error_log("Missing module: $file");
+        error_log( 'Bonsai Theme — missing module: ' . $file );
     }
 }

@@ -3,6 +3,8 @@
  * assets.php – Enqueue scripts and styles
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Preconnects for Google Fonts (fast + correct CORS for gstatic)
 add_action('wp_head', function () { ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +106,7 @@ function bonsai_assets() {
   wp_enqueue_script(
     'main',
     BONSAI_THEME_URI . '/assets/js/main.js',
-    [],
+    [ 'jquery', 'slick', 'bootjs' ],
     filemtime(BONSAI_THEME_DIR . '/assets/js/main.js'),
     true
   );
