@@ -1,0 +1,79 @@
+/**
+ * #.# Content Module
+ *
+ * Styles for template-part/modules/insights_content_module.php
+**/
+
+.insights_content_module {padding:30px 0}
+.insights_content_module .content-block h1{color:var(--black);font-size:68px;line-height:52px;padding:30px 0 40px;font-family:var(--header)}
+.content-block p{font-size:16px;font-style:normal;font-weight:400;line-height:24px;color:var(--black)}
+.content-block p a{}
+.content-block p a:hover,.content-block p a:focus{}
+.content-block li{font-size:16px;font-style:normal;font-weight:400;line-height:24px;color:var(--black)}
+.content-block ul,.content-block ul{}
+.content-block h4{}
+.insights_content_module .content-block h2{font-size:18px;font-style:normal;font-weight:600;line-height:29px;color:var(--black);padding-bottom:10px;padding-top:20px}
+.insights_content_module .content-block h3{font-size:16px;font-style:normal;font-weight:600;line-height:24px;color:var(--black);padding-top:10px}
+.quote-content{margin-top:-20px}
+.content-quote-block{}
+.quote-icon{color:var(--purple);font-family:var(--header);font-size:100px;font-style:normal;font-weight:400;line-height:29.8px;text-transform:uppercase}
+.quote-content p{font-family:var(--header);font-size:28px;font-style:normal;font-weight:400;padding-bottom:25px;line-height:29.8px;text-transform:uppercase;color:var(--black)}
+.quote-cite{font-size:16px;font-style:normal;font-weight:400;line-height:24px;color:var(--black)}
+
+.semantic_ui .ui.table {
+  background: var(--off-white)!important;
+  border: 0px solid rgba(34,36,38,.15)!important;
+  border-radius: 0px!important;
+  color: var(--black)!important;
+  border-bottom: 1px solid rgba(238, 238, 238, 1)!important;
+}
+
+.semantic_ui .ui.table thead th {
+  background: rgba(238, 238, 238, 1)!important;
+  border-bottom: 0px solid rgba(34,36,38,.1)!important;
+  color: var(--black)!important;
+}
+.table-block tbody tr:nth-child(even) {
+  background-color: rgba(238, 238, 238, 1)!important;
+}
+
+/* Even rows */
+.table-block tbody tr:nth-child(odd) {
+  background-color: var(--off-white)!important;
+}
+.semantic_ui .ui.celled.table tr {border-bottom:0px!important}
+.semantic_ui .ui.celled.table tr td,
+.semantic_ui .ui.celled.table tr th {border-left:1px solid #fff!important;border-bottom:0px!important}
+.semantic_ui .ui.table tr td {border-top:0px!important}
+.semantic_ui .ui.celled.table tr td:first-child, .semantic_ui .ui.celled.table tr th:first-child {border-left:none!important}
+.semantic_ui .ui.table thead tr:first-child > th:first-child,
+.semantic_ui .ui.table thead tr:first-child > th:last-child{border-radius: 0px!important;}
+
+.semantic_ui .ui.compact.table th,
+.semantic_ui .ui.table td {padding:15px 17px!important}
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+  .insights_content_module .col-lg-8 .image-block {margin-left:-25px;width:calc(100% + 50px)}
+  .insights_content_module {padding: 15px 0px;}
+  .insights_content_module .content-block h1 {color:var(--black);font-size:36px;line-height:42px;text-align: center;}
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

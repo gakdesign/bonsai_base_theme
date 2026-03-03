@@ -1,6 +1,75 @@
 /**
- * #.# Testimonial Module
+ * Testimonial Module
  *
- * Styles for template-part/modules/testimonial_module.php
+ * Styles for template-parts/modules/testimonial_module.php
 **/
-.testimonial_module {}
+
+.testimonial-module {
+}
+
+.testimonial-module .testimonials-grid {
+}
+
+.testimonial-module .testimonial-card {
+  margin: 0;
+  border: none;
+}
+
+.testimonial-module .testimonial-quote {
+}
+
+.testimonial-module .testimonial-attribution {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-module .testimonial-image {
+  flex-shrink: 0;
+}
+
+.testimonial-module .testimonial-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.testimonial-module .testimonial-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-module .testimonial-name {
+  font-style: normal;
+}
+
+.testimonial-module .testimonial-role {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

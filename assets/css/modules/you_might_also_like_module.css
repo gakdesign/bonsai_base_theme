@@ -1,0 +1,61 @@
+/**
+ * You Might Also Like Module
+ *
+ * Styles for template-parts/modules/you_might_also_like_module.php
+**/
+
+.you-might-also-like-module {
+}
+
+.you-might-also-like-module .also-like-grid {
+}
+
+.you-might-also-like-module .also-like-card {
+}
+
+.you-might-also-like-module .card-image {
+  overflow: hidden;
+}
+
+.you-might-also-like-module .card-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.you-might-also-like-module .also-like-card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+.you-might-also-like-module .card-body {
+}
+
+.you-might-also-like-module .card-link {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

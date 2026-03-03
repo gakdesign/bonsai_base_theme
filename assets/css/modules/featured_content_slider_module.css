@@ -1,0 +1,60 @@
+/**
+ * Featured Content Slider Module
+ *
+ * Styles for template-parts/modules/featured_content_slider_module.php
+ * Uses: .featured-gateway (Slick — configured in main.js)
+**/
+
+.featured-content-slider-module {
+}
+
+.featured-content-slider-module .featured-gateway {
+}
+
+.featured-content-slider-module .featured-slide {
+}
+
+.featured-content-slider-module .slide-image {
+  overflow: hidden;
+}
+
+.featured-content-slider-module .slide-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.featured-content-slider-module .slide-content {
+}
+
+.featured-content-slider-module .slide-text {
+}
+
+.featured-content-slider-module .btn {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

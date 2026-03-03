@@ -1,0 +1,65 @@
+/**
+ * Client Stories Module
+ *
+ * Styles for template-parts/modules/client_stories_module.php
+**/
+
+.client-stories-module {
+}
+
+.client-stories-module .stories-grid {
+}
+
+.client-stories-module .story-card {
+}
+
+.client-stories-module .story-image {
+  overflow: hidden;
+}
+
+.client-stories-module .story-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.client-stories-module .story-card:hover .story-image img {
+  transform: scale(1.03);
+}
+
+.client-stories-module .story-body {
+}
+
+.client-stories-module .story-client {
+  display: block;
+}
+
+.client-stories-module .story-link {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

@@ -1,0 +1,62 @@
+/**
+ * Featured Product Categories Gateway Module
+ *
+ * Styles for template-parts/modules/featured_product_categories_gateway_module.php
+**/
+
+.featured-product-categories-gateway-module {
+}
+
+.featured-product-categories-gateway-module .categories-gateway {
+}
+
+.featured-product-categories-gateway-module .category-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.featured-product-categories-gateway-module .category-image {
+  overflow: hidden;
+}
+
+.featured-product-categories-gateway-module .category-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.featured-product-categories-gateway-module .category-card:hover .category-image img {
+  transform: scale(1.03);
+}
+
+.featured-product-categories-gateway-module .category-title {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

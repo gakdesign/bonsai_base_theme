@@ -1,0 +1,68 @@
+/**
+ * Image Gallery Slider Module
+ *
+ * Styles for template-parts/modules/image_gallery_slider_module.php
+ * Uses: .galleryslider-for / .galleryslider-nav (Slick — configured in main.js)
+**/
+
+.image-gallery-slider-module {
+}
+
+/* Main slide */
+.image-gallery-slider-module .galleryslider-for {
+}
+
+.image-gallery-slider-module .gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Thumbnail nav */
+.image-gallery-slider-module .galleryslider-nav {
+}
+
+.image-gallery-slider-module .gallery-thumb {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.image-gallery-slider-module .gallery-thumb:hover,
+.image-gallery-slider-module .slick-current .gallery-thumb {
+  opacity: 1;
+}
+
+.image-gallery-slider-module .gallery-thumb img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

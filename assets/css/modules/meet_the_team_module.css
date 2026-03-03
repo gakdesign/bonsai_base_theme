@@ -1,0 +1,59 @@
+/**
+ * Meet the Team Module
+ *
+ * Styles for template-parts/modules/meet_the_team_module.php
+**/
+
+.meet-the-team-module {
+}
+
+.meet-the-team-module .team-grid {
+}
+
+.meet-the-team-module .team-card {
+}
+
+.meet-the-team-module .team-image {
+  overflow: hidden;
+}
+
+.meet-the-team-module .team-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.meet-the-team-module .team-details {
+}
+
+.meet-the-team-module .team-role {
+}
+
+.meet-the-team-module .team-bio {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

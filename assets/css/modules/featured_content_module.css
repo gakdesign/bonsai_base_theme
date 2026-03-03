@@ -1,0 +1,50 @@
+/**
+ * Featured Content Module
+ *
+ * Styles for template-parts/modules/featured_content_module.php
+**/
+
+.featured-content-module {
+}
+
+.featured-content-module .featured-image {
+  overflow: hidden;
+}
+
+.featured-content-module .featured-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.featured-content-module .section-content {
+}
+
+.featured-content-module .btn {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

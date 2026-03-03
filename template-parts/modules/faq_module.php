@@ -1,79 +1,62 @@
-<?php 
+<?php
 /**
- * #.# FAQ Module
+ * FAQ Module
+ *
+ * Fields: section_heading, section_content,
+ *         faqs (repeater): faq_question, faq_answer
+ *         remove_top_padding, remove_bottom_padding
  *
  * Related CSS: assets/css/modules/faq_module.css
- * Related CSS (Global CSS): assets/css/core/base.css
- * Related JS (Global scripts): assets/js/main.js
-**/
+ * Related JS:  assets/js/main.js — .accordion-header / .accordion-content
+ **/
+
+$section_heading = get_sub_field('section_heading');
+$section_content = get_sub_field('section_content');
+$no_top          = get_sub_field('remove_top_padding') ? ' no-top-padding' : '';
+$no_bottom       = get_sub_field('remove_bottom_padding') ? ' no-bottom-padding' : '';
 ?>
-<section class="base-module-padding faq_module_section">
+
+<section class="faq-module<?php echo esc_attr( $no_top . $no_bottom ); ?>">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="faq_module">
-          <div class="row gx-5">
-            <div class="col-xl-4 col-lg-6">
-              <div class="faq-list faq-list-one">
-                <div class="content-block">
-                  <h3>FAQS</h3>
-                </div>
-                <?php if( have_rows('faq_items_column_one') ){ ?>
-                <div class="accordion" id="faq_listone">
-                  <?php $i = 0; ?>
-                  <?php while( have_rows('faq_items_column_one') ): the_row(); ?>
-                    <div class="accordion-item">
-                      <div class="accordion-header">
-                          <?php echo get_sub_field('faq_title'); ?>
-                      </div>
-                      <div class="accordion-content content-block">
-                        <?php echo get_sub_field('faq_content'); ?>
-                      </div>
-                    </div>  
-                  <?php $i++;?>
-                  <?php endwhile; ?>
-                </div>
-                <?php } ?>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-              <div class="faq-list faq-list-two">
-                <?php if( have_rows('faq_items_column_two') ){ ?>
-                <div class="accordion" id="faq_listtwo">
-                  <?php $i = 0; ?>
-                  <?php while( have_rows('faq_items_column_two') ): the_row(); ?>
-                    <div class="accordion-item">
-                      <div class="accordion-header">
-                          <?php echo get_sub_field('faq_title'); ?>
-                      </div>
-                      <div class="accordion-content content-block">
-                        <?php echo get_sub_field('faq_content'); ?>
-                      </div>
-                    </div>  
-                  <?php $i++;?>
-                  <?php endwhile; ?>
-                </div>
-                <?php } ?>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-12">
-              <div class="faq-list faq-list-specials">
-                <?php if( have_rows('feature_cta') ){ ?>
-                <?php while( have_rows('feature_cta') ): the_row(); ?>
-                  <div class="faq-featured-link content-block text-center">
-                    <h3><?php echo get_sub_field('cta_title'); ?></h3>
-                    <?php echo get_sub_field('cta_content'); ?>
-                    <?php  $link = get_sub_field('cta_link'); if( $link ): $link_url = $link['url']; $link_title = $link['title'];$link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                      <a class="btn cta-btn bronze-cta" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" title="<?php echo esc_html( $link_title ); ?>" role="button"><?php echo esc_html( $link_title ); ?></a>
-                    <?php endif; ?>
+
+    <?php if ( $section_heading || $section_content ) : ?>
+      <div class="row">
+        <div class="col-lg-12">
+          <?php if ( $section_heading ) : ?>
+            <h2><?php echo esc_html( $section_heading ); ?></h2>
+          <?php endif; ?>
+          <?php if ( $section_content ) : ?>
+            <div class="section-content"><?php echo wp_kses_post( $section_content ); ?></div>
+          <?php endif; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ( have_rows('faqs') ) : ?>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="faq-accordion">
+            <?php while ( have_rows('faqs') ) : the_row();
+              $question = get_sub_field('faq_question');
+              $answer   = get_sub_field('faq_answer');
+            ?>
+              <div class="faq-item">
+                <?php if ( $question ) : ?>
+                  <button class="accordion-header" aria-expanded="false">
+                    <?php echo esc_html( $question ); ?>
+                  </button>
+                <?php endif; ?>
+                <?php if ( $answer ) : ?>
+                  <div class="accordion-content">
+                    <?php echo wp_kses_post( $answer ); ?>
                   </div>
-                <?php endwhile; ?>
-                <?php } ?>
+                <?php endif; ?>
               </div>
-            </div>
+            <?php endwhile; ?>
           </div>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
+
   </div>
 </section>

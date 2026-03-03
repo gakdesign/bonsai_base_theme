@@ -1,0 +1,67 @@
+/**
+ * Case Study Listings Module
+ *
+ * Styles for template-parts/modules/case_study_listings_module.php
+**/
+
+.case-study-listings-module {
+}
+
+.case-study-listings-module .case-studies-grid {
+}
+
+.case-study-listings-module .case-study-card {
+}
+
+.case-study-listings-module .case-study-image {
+  display: block;
+  overflow: hidden;
+}
+
+.case-study-listings-module .case-study-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.case-study-listings-module .case-study-card:hover .case-study-image img {
+  transform: scale(1.03);
+}
+
+.case-study-listings-module .case-study-body {
+}
+
+.case-study-listings-module .case-study-body h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-study-listings-module .case-study-link {
+}
+
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}

@@ -1,4 +1,4 @@
-# [CLIENT NAME] — WordPress Theme
+# Spencer and Bates — WordPress Theme
 
 **Version:** 1.0  
 **Author:** Ben Ervine / [Bonsai Digital Collective](https://bonsaidigitalcollective.co.uk/)  
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This repository contains the bespoke WordPress theme for **[CLIENT NAME]**, built on top of the **Bonsai Base Theme** by [Bonsai Digital Collective](https://bonsaidigitalcollective.co.uk/).
+This repository contains the bespoke WordPress theme for **Spencer and Bates**, built on top of the **Bonsai Base Theme** by [Bonsai Digital Collective](https://bonsaidigitalcollective.co.uk/).
 
 The theme provides:
 
@@ -25,9 +25,9 @@ See full release history in [CHANGELOG.md](CHANGELOG.md).
 
 ## Developers
 
-- **Lead Developer:** [Ben Ervine](https://realityhouse.co.uk)  
-- **Main Designer:** [NAME](URL)  
-- **Support Designer:** [NAME]
+- **Lead Developer:** [Ben Ervine](https://gakdesign.co.uk/)  
+- **Main Designer:** [Rob Doble](https://www.robdobledesign.co.uk/)  
+- **Support Designer:** [Chrissie Towill](https://bonsaidigitalcollective.co.uk/)  
 - **Agency:** [Bonsai Digital Collective](https://bonsaidigitalcollective.co.uk/) 
 
 ---
@@ -107,15 +107,6 @@ Any refactors or new modules should:
 **Private License — All Rights Reserved.**  
 Developed exclusively for **The Bonsai Digital Collective** and its clients.  
 Do not distribute or reuse without written permission.
-
----
-
-## Changelog
-
-**v1.0 — Initial Release**  
-- Base theme structure  
-- ACF flexible layout support  
-- Core setup, enqueue, and security functions added  
 
 ---
 
